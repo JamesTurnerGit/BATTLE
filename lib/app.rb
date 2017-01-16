@@ -13,7 +13,12 @@ get '/secret-a' do
 	"I smell-a"
 end
 
-get '/cat' do
-  cat_name = ["roger", "dennis", "pringles"].shuffle.pop
-  erb :index, :locals => {:cat_name => cat_name}
+get '/random-cat' do
+  params[:name] = ["roger", "dennis", "pringles"].shuffle.pop
+  erb :index, :locals => {:name => params[:name]}
+end
+
+get '/named-cat' do
+  #params[:name] = ["roger", "dennis", "pringles"].shuffle.pop
+  erb :index, :locals => {:name => params[:name]}
 end
