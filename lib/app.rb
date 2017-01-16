@@ -18,7 +18,11 @@ get '/random-cat' do
   erb :index, :locals => {:name => params[:name]}
 end
 
-get '/named-cat' do
-  #params[:name] = ["roger", "dennis", "pringles"].shuffle.pop
+post '/named-cat' do
+  p params
   erb :index, :locals => {:name => params[:name]}
+end
+
+get '/form' do
+  erb :form
 end
