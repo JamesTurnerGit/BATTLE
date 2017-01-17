@@ -3,11 +3,6 @@ require 'capybara/rspec'
 #require 'selenium-webdriver'
 require 'capybara/poltergeist'
 require 'app'
-# require 'features/web_helpers'
-
-Capybara.default_driver = :poltergeist
-Capybara.run_server = false
-Capybara.app_host = "http://localhost:9393"
 
 describe 'Battle - ' do
   feature 'View hit points - ' do
