@@ -1,8 +1,3 @@
-require 'capybara/dsl'
-require 'capybara/rspec'
-#require 'selenium-webdriver'
-require 'capybara/poltergeist'
-require 'app'
 
 describe 'battle' do
   feature 'Enter names' do
