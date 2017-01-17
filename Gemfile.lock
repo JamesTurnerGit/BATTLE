@@ -41,8 +41,6 @@ GEM
       pry (~> 0.10)
     public_suffix (2.0.5)
     rack (1.6.5)
-    rack-flash3 (1.0.5)
-      rack
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -99,7 +97,6 @@ DEPENDENCIES
   poltergeist
   pry
   pry-byebug
-  rack-flash3
   rspec
   rspec-sinatra
   selenium-webdriver

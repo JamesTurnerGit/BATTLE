@@ -1,8 +1,8 @@
 <div style="margin:auto; width:100%; text-align:center">
   <%= @player_1_name  + " vs. " + @player_2_name%>
   <div style="margin:auto; display:inline-block; width:100%; text-align:center">
-      <%= @player_1_name %>: 20HP
-      <%= @player_2_name %>: 20HP
+      <%= @player_1_name %>: <%= @player_1_health %>HP
+      <%= @player_2_name %>: <%= @player_2_health %>HP
   </div>
   <div style="margin:auto; display:inline-block; width:100%; text-align:center">
     <form action="/attack">
