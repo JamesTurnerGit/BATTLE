@@ -13,3 +13,4 @@ gem 'pry-byebug'
 gem 'rspec-sinatra'
 gem 'simplecov', :require => false, :group => :test
 gem 'poltergeist'
+

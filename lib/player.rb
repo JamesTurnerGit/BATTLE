@@ -1,4 +1,3 @@
-#Class
 class Player
   attr_reader :name
   def initialize initial_name
