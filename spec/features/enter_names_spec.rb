@@ -1,4 +1,3 @@
-
 describe 'battle' do
   feature 'Enter names' do
     scenario 'submitting names' do

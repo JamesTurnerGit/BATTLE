@@ -1,4 +1,3 @@
-
 describe 'battle - ' do
   feature 'Attacking - ' do
     scenario 'player one hits player two' do
