@@ -7,6 +7,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'capybara/poltergeist'
+require 'features/web_helpers'
 
 Capybara.app = Battle
 Capybara.default_driver = :poltergeist
