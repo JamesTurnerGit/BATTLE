@@ -1,7 +1,17 @@
-<%= @player_1_name %> vs. <%= @player_2_name %>
-<%= @active_player_name %>'s turn
-<%= @player_2_name %> Hp:<%= @player_2_health %>
-<%= @player_1_name %> Hp:<%= @player_1_health %>
-<form action="/attack" method="post">
-  <button type="submit">Attack!</button>
-</form>
+<div>
+  <%= @player_1_name %> vs. <%= @player_2_name %>
+</div>
+<div>
+  <%= @active_player_name %>'s turn
+</div>
+<div>
+  <%= @player_2_name %> Hp:<%= @player_2_health %>
+</div>
+<div>
+  <%= @player_1_name %> Hp:<%= @player_1_health %>
+</div>
+<div>
+  <form action="/attack" method="post">
+    <button type="submit">Attack!</button>
+  </form>
+</div>
