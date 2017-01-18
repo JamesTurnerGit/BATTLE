@@ -28,8 +28,16 @@ class Battle < Sinatra::Base
     opponent = $game.opponent_of $game.active_player
     $game.attack opponent
     @opponent_name = opponent.name
+    if opponent.health == 0
+      redirect '/winner'
+    end
     $game.switch
     erb :attack
+  end
+
+  get '/winner' do
+    @winner = $game.active_player.name
+    erb :winner
   end
 
   # start the server if ruby file executed directly

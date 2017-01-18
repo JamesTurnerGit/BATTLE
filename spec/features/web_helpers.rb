@@ -4,3 +4,8 @@ def sign_in_and_play
   fill_in 'player2', with: 'Hooch'
   click_button 'Start Battle!'
 end
+
+def attack
+  click_button 'Attack!'
+  click_button 'OK!'
+end

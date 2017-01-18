@@ -37,3 +37,12 @@ feature "switches after each turn" do
     expect(page).to have_content "Hooch's turn"
   end
 end
+
+feature "players can lose" do
+  scenario "player loses when hp reaches 0" do
+    sign_in_and_play
+    18.times{attack}
+    click_button 'Attack!'
+    expect(page).to have_content "Turner wins"
+  end
+end
