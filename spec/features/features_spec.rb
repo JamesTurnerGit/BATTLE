@@ -28,3 +28,12 @@ feature "players do damage" do
     expect(page).to have_content "Hooch Hp:90"
   end
 end
+
+feature "switches after each turn" do
+  scenario "active_player switches after attack" do
+    sign_in_and_play
+    click_button 'Attack!'
+    click_button 'OK!'
+    expect(page).to have_content "Hooch's turn"
+  end
+end

@@ -20,4 +20,16 @@ describe Game do
       expect(game.player_2).to eq player_2
     end
   end
+  describe '#active_player' do
+    it "returns the active player" do
+      expect(game.active_player).to eq player_1
+    end
+  end
+  describe '#switch' do
+    it "switches players after their turn" do
+      game.switch
+      expect(game.active_player).to eq player_2
+    end
+  end
+
 end
