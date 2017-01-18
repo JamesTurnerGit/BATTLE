@@ -16,10 +16,12 @@ class Battle < Sinatra::Base
   get '/play' do
     @player1 = $player1.name
     @player2 = $player2.name
+    @player2_health = $player2.health
     erb :play
   end
 
-  get '/attack' do
+  post '/attack' do
+    $player1.attack $player2
     @player2 = $player2.name
     erb :attack
   end
