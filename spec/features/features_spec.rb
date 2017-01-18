@@ -26,14 +26,21 @@ feature "players do damage" do
     click_button 'Attack!'
     click_button 'OK!'
     expect(page).to have_content "Hooch Hp:90"
+    click_button 'Attack!'
+    click_button 'OK!'
+    expect(page).to have_content "Turner Hp:90"
   end
 end
 
 feature "switches after each turn" do
   scenario "active_player switches after attack" do
     sign_in_and_play
+    expect(page).to have_content "Turner's turn"
     click_button 'Attack!'
     click_button 'OK!'
     expect(page).to have_content "Hooch's turn"
+    click_button 'Attack!'
+    click_button 'OK!'
+    expect(page).to have_content "Turner's turn"
   end
 end
