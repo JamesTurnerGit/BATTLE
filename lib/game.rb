@@ -5,6 +5,11 @@ class Game
     @player_1 = player_1
     @player_2 = player_2
     @active_player = player_1
+    @@game = self
+  end
+
+  def self.instance
+    @@game
   end
 
   def attack player
@@ -27,6 +32,17 @@ class Game
     end
   end
 
+  def player_1
+    @player_1
+  end
+
+  def player_2
+    @player_2
+  end
+
+  def active_player
+    @active_player
+  end
   private
 
   def player_1_active
