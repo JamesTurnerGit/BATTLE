@@ -11,3 +11,11 @@ feature "viewing hit points - " do
     expect(page). to have_content "Hooch Hp:100"
   end
 end
+
+feature "attack other player" do
+  scenario "attack other player and get confirmation" do
+    sign_in_and_play
+    click_button 'Attack!'
+    expect(page). to have_content "You have attacked Hooch!"
+  end
+end
