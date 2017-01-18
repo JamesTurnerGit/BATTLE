@@ -1,17 +1,25 @@
-<div>
-  <%= @player_1_name %> vs. <%= @player_2_name %>
-</div>
-<div>
-  <%= @active_player_name %>'s turn
-</div>
-<div>
-  <%= @player_2_name %> Hp:<%= @player_2_health %>
-</div>
-<div>
-  <%= @player_1_name %> Hp:<%= @player_1_health %>
-</div>
-<div>
-  <form action="/attack" method="post">
-    <button type="submit">Attack!</button>
-  </form>
-</div>
+<center>
+<font face="Verdana" size="3">
+<p style="max-width: 200px; border: 6px solid #1F535D;background-color: #08CEF6">
+
+  <div>
+    <%= @player_1_name %> vs. <%= @player_2_name %>
+  </div><br>
+  <div>
+    <b><%= @active_player_name %>'s turn</b>
+  </div><br>
+  <div>
+    <%= @player_2_name %> HP:<%= @player_2_health %>
+  </div><br>
+  <div>
+    <%= @player_1_name %> HP:<%= @player_1_health %>
+  </div><br>
+  <div>
+    <form action="/attack" method="post">
+      <button type="submit">Attack!</button>
+    </form>
+  </div>
+
+</p>
+</font>
+</center>
