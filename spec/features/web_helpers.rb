@@ -6,6 +6,6 @@ def sign_in_and_play
 end
 
 def attack_and_switch
-	click_link('Attack')
+	click_button('Attack')
 	click_link('Switch!')
 end

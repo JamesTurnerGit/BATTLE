@@ -6,7 +6,9 @@
 <br>
 <%=@game.current_player.name%> is playing:
 
-<a href="/attack">Attack</a>
-
+<!--#<a href="/attack">Attack</a>-->
+<form action="/attack" method="post">
+      <button type="submit">Attack!</button>
+</form>
 
 </div>

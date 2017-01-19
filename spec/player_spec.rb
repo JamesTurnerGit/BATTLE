@@ -17,4 +17,13 @@ subject(:player2) {described_class.new("Mark")}
 	 		expect(player.reduce_hp).to eq 90
 	 	end
 	 end
+	 
+	 describe '#dead?' do
+	 	it 'should know when it\'s dead' do
+	 		10.times do
+	 			player.reduce_hp
+	 		end
+	 		is_expected.to be_dead
+	 	end
+	 end
 end

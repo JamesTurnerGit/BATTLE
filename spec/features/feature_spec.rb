@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-RSpec.feature "Name form", :type => :feature do
+feature "Name form" do
 	scenario "User enters a name and submit" do
 	sign_in_and_play
 	expect(page).to have_content('John vs Bill')
 	end
 end
 
-RSpec.feature "Hit points", :type => :feature do
+feature "Hit points" do
 	scenario "Seeing hit points" do
 	sign_in_and_play
 	expect(page).to have_content ('Bill: 100 HP')
@@ -15,26 +15,37 @@ RSpec.feature "Hit points", :type => :feature do
 	end
 end
 
-RSpec.feature "Attack", :type => :feature do
+feature "Attack" do
 	scenario "Attack player two" do
 		sign_in_and_play
-		click_link('Attack')
+		click_button('Attack')
 		expect(page).to have_content ('John attacked Bill!')
 	end
 
 	scenario "Reduce opponent HP by 10" do
 		sign_in_and_play
 		attack_and_switch
-		click_link('Attack')
+		click_button('Attack')
 		expect(page).to have_content ('John\'s HP has dropped by 10!')
 	end
 end
 
-RSpec.feature "Switch", :type => :feature do
+feature "Switch" do
 	scenario "Players can switch turns" do
 		sign_in_and_play
 		attack_and_switch
 		expect(page).to_not have_content ("John is playing")
 		expect(page).to have_content ("Bill is playing")
+	end
+end
+
+feature "Losing" do
+	scenario "player reaches zero hp" do
+		sign_in_and_play
+		18.times do
+			attack_and_switch
+		end
+		click_button('Attack!')
+		expect(page).to have_content ("John is victorious!!")
 	end
 end
