@@ -1,13 +1,13 @@
-
 class Game
 
   DEFAULT_DAMAGE = 10
 
-  attr_reader :player1, :player2
-  
-  def initialize(player1, player2)
-      @player1 = player1
-      @player2 = player2
+  attr_reader :players
+
+  def initialize(player_1, player_2)
+    @players = {}
+    @players[:player_1] = player_1
+    @players[:player_2] = player_2
   end
 
   def attack(opponent, damage = DEFAULT_DAMAGE)
