@@ -5,16 +5,15 @@ require './lib/game'
 class Battle < Sinatra::Base
   enable :sessions
 
-  # before do
-  #   @game = Game.current_game || "cheeseburger"
-  # end
+  before do
+    @game = Game.current_game
+  end
 
   get '/' do
     erb(:index)
   end
 
   get '/victory' do
-    @game = Game.current_game
     erb(:victory)
   end
 
@@ -26,17 +25,14 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @game = Game.current_game
     erb(:play)
   end
 
   get '/attack' do
-    @game = Game.current_game
     erb(:attack)
   end
 
   post '/attack' do
-    @game = Game.current_game
     @game.attack(@game.current_opponent)
     if @game.opponent_dead?
       redirect '/victory'
@@ -45,8 +41,7 @@ class Battle < Sinatra::Base
     end
   end
 
-  get '/switch' do
-    @game = Game.current_game
+  post '/switch' do
     @game.switch
     redirect '/play'
   end

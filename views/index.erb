@@ -1,13 +1,27 @@
-<h1>Welcome to... BATTLE!</h1>
+<style type="text/css">
+h1 {
+  color: #800000
+}
+body {
+background: #f66
+}
+form {
+  padding: 15px;
+  border: groove;
+  background-color: pink
+}
+</style>
 
-<h2>Please enter player names below</h2>
-<form method='POST' action='/names'>
-  <div>
-    <label for="Player1">Player One</label>
-    <input type="text" name="player_one_name" id="Player1" />
-    
-    <label for="Player2">Player Two</label>
-    <input type="text" name="player_two_name" id="Player2" />
-    <input type="submit" value="Submit" />
-  </div>
-</form>
+<center>
+  <h1>Welcome to... BATTLE!</h1>
+  <h2>Please enter player names below</h2>
+  <form method='POST' action='/names'>
+    <div>
+      <label for="Player1">Player One</label>
+      <input type="text" name="player_one_name" id="Player1" placeholder="Player 1" />
+      <label for="Player2">Player Two</label>
+      <input type="text" name="player_two_name" id="Player2" placeholder="Player 2" />
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+</center>

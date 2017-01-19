@@ -7,5 +7,5 @@ end
 
 def attack_and_switch
 	click_button('Attack')
-	click_link('Switch!')
+	click_button('Switch!')
 end
