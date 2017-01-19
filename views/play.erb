@@ -1,1 +1,11 @@
-<%= @player_1_name %> vs. <%= @player_2_name %>: 60HP
+<h1>Game On!</h1>
+<%= @player_1_name %> vs. <%= @player_2_name %>
+<!-- <br>
+<%= @player_1_name %>: 60HP -->
+<br>
+<%= @player_2_name %>: 60HP
+
+<h2> Fight!! </h2>
+<form action="/attack">
+  <input type="submit" value="Attack">
+</form>
