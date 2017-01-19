@@ -1,48 +1,35 @@
+<link rel="stylesheet" href="css.css" type="text/css" />
+<link rel="stylesheet" href="play.css" type="text/css" />
+
 <style type="text/css">
-  h1 {
-    color: #4286f4
-  }
-  
-  /*div.game_zone {*/
-  /*  max-width: 800px*/
-  /*}*/
-  
-  div.player {
-    max-size: 57px
-  }
-  
-  div#player1 {
-    float: left
-  }
-  
-  div#player2 {
-    float: right
-  }
-  
-  div#is_playing {
-    line-height: 350px
-  }
-  
-  button {
-    color: red;
-    padding: 100px;
-    font-size: 25pt
+  div.health{
+    float: left;
+    background: green;
+    padding-top: 40px;
+    max-width: 50px
+
+    /*max-width: <%= @game.player_one.hp %>%;*/
   }
 </style>
 
 <center>
   <div class="game_zone">
-    
     <h1><%= @game.player_one.name%> vs <%= @game.player_two.name %></h1>
-    
+
     <div class="player" id="player1">
       <h2><%= @game.player_one.name %>: <%=@game.player_one.hp %> HP</h2>
       <img width="600" height="600" src="http://audubonnatureinstitute.org/images/600x450/zoo/flamingo-600.jpg">
+      <br>
+      <div class="healthBar" id="player_1_health">
+        <div class="health" id="player_1_current_health"></div>
+      </div>
     </div>
-    
+
     <div class="player" id="player2">
       <h2><%= @game.player_two.name %>: <%= @game.player_two.hp%> HP</h2>
       <img width="600" height="600" src="http://yourshot.nationalgeographic.com/u/ss/fQYSUbVfts-T7pS2VP2wnKyN8wxywmXtY0-FwsgxpcdRPMDawG6vOZmb8sJiak5GBaAdPdr8KycH479bAMjS/">
+      <br>
+      <div class="healthBar" id="player_2_health"> </div>
     </div>
 
     <div id="is_playing">
@@ -52,6 +39,6 @@
     <form action="/attack" method="post">
       <button type="submit">Attack!</button>
     </form>
-  
+
   </div>
 </center>

@@ -1,0 +1,26 @@
+div#player1 {
+  float: left
+}
+
+div.healthBar{
+  buffer: 10px;
+  border:  2px solid black;
+  border-radius: 15px;
+  padding-top: 40px;
+  background: white
+}
+
+
+div#player2 {
+  float: right
+}
+
+div#is_playing {
+  line-height: 350px
+}
+
+button {
+  color: red;
+  padding: 100px;
+  font-size: 25pt
+}

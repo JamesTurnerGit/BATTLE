@@ -1,0 +1,14 @@
+div.player1 {
+  float: left
+}
+
+div.player2 {
+  float: right
+}
+
+form {
+  padding: 15px;
+  border: groove;
+  background-color: pink;
+  max-width: 625px
+}
