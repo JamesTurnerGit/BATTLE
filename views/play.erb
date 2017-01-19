@@ -2,14 +2,15 @@
 <link rel="stylesheet" href="play.css" type="text/css" />
 
 <style type="text/css">
-  div.health{
-    float: left;
-    background: green;
-    padding-top: 40px;
-    max-width: 50px
 
-    /*max-width: <%= @game.player_one.hp %>%;*/
+  div#player_1_current_health {
+    padding-left: <%= @game.player_one.hp %>%;
   }
+  
+  div#player_2_current_health {
+    padding-left: <%= @game.player_two.hp %>%;
+  }
+  
 </style>
 
 <center>
@@ -29,7 +30,9 @@
       <h2><%= @game.player_two.name %>: <%= @game.player_two.hp%> HP</h2>
       <img width="600" height="600" src="http://yourshot.nationalgeographic.com/u/ss/fQYSUbVfts-T7pS2VP2wnKyN8wxywmXtY0-FwsgxpcdRPMDawG6vOZmb8sJiak5GBaAdPdr8KycH479bAMjS/">
       <br>
-      <div class="healthBar" id="player_2_health"> </div>
+      <div class="healthBar" id="player_2_health"> 
+        <div class="health" id="player_2_current_health"></div>
+      </div>
     </div>
 
     <div id="is_playing">

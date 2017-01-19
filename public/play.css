@@ -1,9 +1,20 @@
-div#player1 {
+#player1 {
   float: left
 }
 
-div.healthBar{
-  buffer: 10px;
+.health{
+  float: left;
+  border-radius: 13px;
+  background: green;
+  padding-top: 40px;
+  max-width: 50px;
+  height: -40px;
+  top: -40px;
+  position: relative
+
+}
+
+.healthBar{
   border:  2px solid black;
   border-radius: 15px;
   padding-top: 40px;
@@ -11,11 +22,11 @@ div.healthBar{
 }
 
 
-div#player2 {
+#player2 {
   float: right
 }
 
-div#is_playing {
+#is_playing {
   line-height: 350px
 }
 

@@ -9,8 +9,8 @@ class Player
 		@hp = HP
 	end
 
-	def reduce_hp
-		@hp -= 10
+	def reduce_hp(damage = 10)
+		@hp -= damage
 	end
 
 	def dead?

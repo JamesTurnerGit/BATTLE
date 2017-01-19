@@ -4,12 +4,14 @@ describe Game do
 	subject(:game) {described_class.new(player_one, player_two)}
 	let(:player_one) {double :player}
 	let(:player_two) {double :player,reduce_hp: nil}
+	
 
 	describe '#attack' do
-		it 'reduce the opponent HP by 10' do
+		it 'reduce the opponent HP by a random amount of damage' do
+			allow(Kernel).to receive(:rand).and_return(9)
 			allow(player_two).to receive(:dead?).and_return(false)
 			game.attack(player_two)
-			expect(player_two).to have_received(:reduce_hp)
+			expect(player_two).to have_received(:reduce_hp).with(9)
 		end
 	end
 
@@ -29,5 +31,4 @@ describe Game do
 			expect{game.switch}.to change{game.current_player}.to player_one
 		end
 	end
-
 end

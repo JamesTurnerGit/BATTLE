@@ -12,7 +12,7 @@ describe Player do
 		end
 	end
 
-	describe '#attack' do
+	describe '#reduce_hp' do
 		it 'should reduce opponent HP by 10' do
 			expect(player.reduce_hp).to eq 90
 		end
