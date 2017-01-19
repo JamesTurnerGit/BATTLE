@@ -8,7 +8,16 @@ background: #f66
 form {
   padding: 15px;
   border: groove;
-  background-color: pink
+  background-color: pink;
+  max-width: 625px
+}
+
+div.player1 {
+  float: left
+}
+
+div.player2 {
+  float: right
 }
 </style>
 
@@ -17,10 +26,14 @@ form {
   <h2>Please enter player names below</h2>
   <form method='POST' action='/names'>
     <div>
-      <label for="Player1">Player One</label>
-      <input type="text" name="player_one_name" id="Player1" placeholder="Player 1" />
-      <label for="Player2">Player Two</label>
-      <input type="text" name="player_two_name" id="Player2" placeholder="Player 2" />
+      <div class="Player1">
+        <label for="Player1">Player One</label>
+        <input type="text" name="player_one_name" id="Player1" placeholder="Player 1" />
+      </div>
+      <div class="Player2">
+        <label for="Player2">Player Two</label>
+        <input type="text" name="player_two_name" id="Player2" placeholder="Player 2" />
+      </div>
       <input type="submit" value="Submit" />
     </div>
   </form>

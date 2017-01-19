@@ -1,14 +1,57 @@
+<style type="text/css">
+  h1 {
+    color: #4286f4
+  }
+  
+  /*div.game_zone {*/
+  /*  max-width: 800px*/
+  /*}*/
+  
+  div.player {
+    max-size: 57px
+  }
+  
+  div#player1 {
+    float: left
+  }
+  
+  div#player2 {
+    float: right
+  }
+  
+  div#is_playing {
+    line-height: 350px
+  }
+  
+  button {
+    color: red;
+    padding: 100px;
+    font-size: 25pt
+  }
+</style>
 
-<div>
-  <%= @game.player_one.name%> vs <%= @game.player_two.name %>
-  <br>
-  <%= @game.player_one.name %>: <%=@game.player_one.hp %> HP vs <%= @game.player_two.name %>: <%= @game.player_two.hp%> HP
-  <br>
-  <%=@game.current_player.name%> is playing:
+<center>
+  <div class="game_zone">
+    
+    <h1><%= @game.player_one.name%> vs <%= @game.player_two.name %></h1>
+    
+    <div class="player" id="player1">
+      <h2><%= @game.player_one.name %>: <%=@game.player_one.hp %> HP</h2>
+      <img width="600" height="600" src="http://audubonnatureinstitute.org/images/600x450/zoo/flamingo-600.jpg">
+    </div>
+    
+    <div class="player" id="player2">
+      <h2><%= @game.player_two.name %>: <%= @game.player_two.hp%> HP</h2>
+      <img width="600" height="600" src="http://yourshot.nationalgeographic.com/u/ss/fQYSUbVfts-T7pS2VP2wnKyN8wxywmXtY0-FwsgxpcdRPMDawG6vOZmb8sJiak5GBaAdPdr8KycH479bAMjS/">
+    </div>
 
-  <!--#<a href="/attack">Attack</a>-->
-  <form action="/attack" method="post">
-    <button type="submit">Attack!</button>
-  </form>
+    <div id="is_playing">
+      <h2><%=@game.current_player.name%> is playing:</h2>
+    </div>
 
-</div>
+    <form action="/attack" method="post">
+      <button type="submit">Attack!</button>
+    </form>
+  
+  </div>
+</center>

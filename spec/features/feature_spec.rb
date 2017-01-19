@@ -49,3 +49,15 @@ feature "Losing" do
 		expect(page).to have_content ("John is victorious!!")
 	end
 end
+
+feature "Restart" do
+	scenario "restart game after a player wins" do
+		sign_in_and_play
+		18.times do
+			attack_and_switch
+		end
+		click_button('Attack!')
+		click_button('Restart')
+		expect(page).to have_content ("Welcome to... BATTLE!")
+	end
+end
