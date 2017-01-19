@@ -16,6 +16,10 @@ describe Player do
 		it 'should reduce opponent HP by 10' do
 			expect(player.reduce_hp).to eq 90
 		end
+		it 'should reduce by specified amount' do
+			random = rand(1..50)
+			expect{player.reduce_hp random}.to change{player.hp}.by(-random)
+		end
 	end
 
 	describe '#dead?' do

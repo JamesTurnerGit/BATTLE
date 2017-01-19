@@ -15,7 +15,7 @@ class Game
   end
 
   def attack(player)
-    player.reduce_hp
+    player.reduce_hp(rand(1..10))
   end
 
   def switch

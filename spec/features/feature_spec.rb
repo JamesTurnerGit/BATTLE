@@ -22,11 +22,12 @@ feature "Attack" do
 		expect(page).to have_content ('John attacked Bill!')
 	end
 
-	scenario "Reduce opponent HP by 10" do
+	scenario "Reduce opponent HP by random ammount" do
+		srand(67809)
 		sign_in_and_play
 		attack_and_switch
 		click_button('Attack')
-		expect(page).to have_content ('John\'s HP has dropped by 10!')
+		expect(page).to have_content ('John\'s HP has dropped!')
 	end
 end
 
@@ -41,8 +42,9 @@ end
 
 feature "Losing" do
 	scenario "player reaches zero hp" do
+		srand(67809)
 		sign_in_and_play
-		18.times do
+		32.times do
 			attack_and_switch
 		end
 		click_button('Attack!')
@@ -52,8 +54,9 @@ end
 
 feature "Restart" do
 	scenario "restart game after a player wins" do
+		srand(67809)
 		sign_in_and_play
-		18.times do
+		32.times do
 			attack_and_switch
 		end
 		click_button('Attack!')
