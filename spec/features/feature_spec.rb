@@ -2,16 +2,16 @@ require 'spec_helper'
 
 feature "Name form" do
 	scenario "User enters a name and submit" do
-	sign_in_and_play
-	expect(page).to have_content('John vs Bill')
+		sign_in_and_play
+		expect(page).to have_content('John vs Bill')
 	end
 end
 
 feature "Hit points" do
 	scenario "Seeing hit points" do
-	sign_in_and_play
-	expect(page).to have_content ('Bill: 100 HP')
-	expect(page).to have_content ('John: 100 HP')
+		sign_in_and_play
+		expect(page).to have_content ('Bill: 100 HP')
+		expect(page).to have_content ('John: 100 HP')
 	end
 end
 

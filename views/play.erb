@@ -1,14 +1,14 @@
 
 <div>
-<%= @game.player_one.name%> vs <%= @game.player_two.name %>
-<br>
-<%= @game.player_one.name %>: <%=@game.player_one.hp %> HP vs <%= @game.player_two.name %>: <%= @game.player_two.hp%> HP
-<br>
-<%=@game.current_player.name%> is playing:
+  <%= @game.player_one.name%> vs <%= @game.player_two.name %>
+  <br>
+  <%= @game.player_one.name %>: <%=@game.player_one.hp %> HP vs <%= @game.player_two.name %>: <%= @game.player_two.hp%> HP
+  <br>
+  <%=@game.current_player.name%> is playing:
 
-<!--#<a href="/attack">Attack</a>-->
-<form action="/attack" method="post">
-      <button type="submit">Attack!</button>
-</form>
+  <!--#<a href="/attack">Attack</a>-->
+  <form action="/attack" method="post">
+    <button type="submit">Attack!</button>
+  </form>
 
 </div>

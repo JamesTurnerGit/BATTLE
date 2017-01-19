@@ -1,9 +1,9 @@
 require 'game'
 
 describe Game do
-subject(:game) {described_class.new(player_one, player_two)}
-let(:player_one) {double :player}
-let(:player_two) {double :player,reduce_hp: nil}
+	subject(:game) {described_class.new(player_one, player_two)}
+	let(:player_one) {double :player}
+	let(:player_two) {double :player,reduce_hp: nil}
 
 	describe '#attack' do
 		it 'reduce the opponent HP by 10' do
@@ -13,12 +13,12 @@ let(:player_two) {double :player,reduce_hp: nil}
 		end
 	end
 
-	 describe '#opponent_dead?' do
-		 it 'returns true if opponent is dead' do
-			 allow(player_two).to receive(:dead?).and_return(true)
-			 expect(game.opponent_dead?).to eq true
-		 end
-	 end
+	describe '#opponent_dead?' do
+		it 'returns true if opponent is dead' do
+			allow(player_two).to receive(:dead?).and_return(true)
+			expect(game.opponent_dead?).to eq true
+		end
+	end
 
 	describe '#switch' do
 		it 'changes the current player to player_two' do

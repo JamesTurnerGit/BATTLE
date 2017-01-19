@@ -7,7 +7,6 @@ class Player
 	def initialize(name)
 		@name=name
 		@hp = HP
-
 	end
 
 	def reduce_hp
