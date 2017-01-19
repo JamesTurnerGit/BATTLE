@@ -30,8 +30,7 @@ RSpec.feature "Attack", :type => :feature do
 
 	scenario "Reduce opponent HP by 10" do
 		sign_in_and_play
-		click_link('Attack')
-		click_link('Switch')
+		attack_and_switch
 		click_link('Attack')
 		expect(page).to have_content ('John HP has dropped by 10!')
 	end
@@ -40,8 +39,7 @@ end
 RSpec.feature "Switch", :type => :feature do
 	scenario "Players can switch turns" do
 		sign_in_and_play
-		click_link('Attack')
-		click_link('Switch!')
+		attack_and_switch
 		expect(page).to_not have_content ("John is playing")
 		expect(page).to have_content ("Bill is playing")
 	end
