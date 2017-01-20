@@ -13,10 +13,17 @@ class Game
 
   def attack(opponent, damage = DEFAULT_DAMAGE)
     opponent.take_damage(damage)
+    switch_player
   end
 
   def switch_player
-    
+    @current_player = other_player current_player
+  end
+
+  private
+  def other_player player
+    return players[:player_2] if player == players[:player_1]
+    players[:player_1]
   end
 
 end

@@ -19,17 +19,22 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @players = $game.players
     @game = $game
+    @players = @game.players
     erb :play
+  end
+
+  post '/attack' do
+    game = $game
+    @players = game.players
+    game.attack(@players[:player_2])
+    redirect '/attack'
   end
 
   get '/attack' do
     @players = $game.players
-    $game.attack($game.players[:player_2])
     erb :attack
   end
-
 
   # start the server if ruby file executed directly
   run! if app_file == $0

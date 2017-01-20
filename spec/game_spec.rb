@@ -7,7 +7,8 @@ describe Game do
   subject(:game) { described_class.new(player_1, player_2)}
 
   it 'can attack an opponent' do
-    expect(game.attack(player_2)).to eq(player_2.take_damage)
+    game.attack(player_2)
+    expect(player_2).to have_received(:take_damage).with 10
   end
 
   it 'shows the attackering player as player 1' do
@@ -15,7 +16,8 @@ describe Game do
   end
 
   it 'show attacking player as player 2' do
-    expect(game.switch).to eq player_2
+    game.switch_player
+    expect(game.current_player).to eq player_2
   end
-  
+
 end

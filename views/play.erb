@@ -1,18 +1,18 @@
 <center><h1>Game on!</h1>
-<h2><%= @players[:player_1].name %> vs. <%= @players[:player_2].name %></h2>
-<!-- <br>
-<%= @player_1_name %>: 60HP -->
+  <h2><%= @players[:player_1].name %> vs. <%= @players[:player_2].name %></h2>
+  <!-- <br>
+  <%= @player_1_name %>: 60HP -->
 
-<h2> Fight!! </h2>
-<form action="/attack">
-  <input type="submit" value="Attack">
-</form>
+  <h2> Fight!! </h2>
+  <form action="/attack" method="post">
+    <input type="submit" value="Attack">
+  </form>
 
-<br>
-<%= @players[:player_1].name %>: <strong><%= @players[:player_1].hitpoints %>HP</strong>
- :
-<%= @players[:player_2].name %>: <strong><%= @players[:player_2].hitpoints %>HP</strong>
+  <br>
+  <%= @players[:player_1].name %>: <strong><%= @players[:player_1].hitpoints %>HP</strong>
+  :
+  <%= @players[:player_2].name %>: <strong><%= @players[:player_2].hitpoints %>HP</strong>
 
-<%= @game.current_player.name %>'s turn
+  <%= @game.current_player.name %>'s turn
 
 </center>
