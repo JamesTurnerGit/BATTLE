@@ -20,4 +20,8 @@ describe Game do
     expect(game.current_player).to eq player_2
   end
 
+  it 'it shows opposing player' do
+    expect(game.opposing_player).to eq player_2
+  end
+
 end

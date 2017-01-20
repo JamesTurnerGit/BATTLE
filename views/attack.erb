@@ -1,4 +1,4 @@
-<center><h1><%= @players[:player_1].name %> attacked <%= @players[:player_2].name %></h1>
+<center><h1><%= @game.opposing_player.name %> attacked <%= @game.current_player.name %></h1>
 
   <form action="/play">
     <br>

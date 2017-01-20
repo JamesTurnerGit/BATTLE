@@ -20,10 +20,13 @@ class Game
     @current_player = other_player current_player
   end
 
-  private
   def other_player player
     return players[:player_2] if player == players[:player_1]
     players[:player_1]
+  end
+
+  def opposing_player
+    other_player current_player
   end
 
 end
