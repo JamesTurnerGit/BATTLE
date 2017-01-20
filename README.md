@@ -5,4 +5,8 @@ Makers Academy Week 3 Challenge
 
 the most intense next-gen flamingo showdown/throwdown you will ever come accross!
 
-Featuring healthbars!
+Featuring healthbars!, Random damage!
+
+usage
+---
+just enter your names and click the button!
