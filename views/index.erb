@@ -1,18 +1,42 @@
-<center><h1>Battle Royale!</h1>
-  <h2>Sign in to play</h2>
-  <form action="/names" method="post">
-    <label for="player_1_name">
-      Player 1 name
-      <input type="text" name="player_1_name">
-    </label>
-    <br>
-    <br>
-    <label for="player_2_name">
-      Player 2 name
-      <input type="text" name="player_2_name">
-    </label>
-    <br>
-    <br>
-    <input type="submit" value="Submit">
-  </form>
-</center>
+<style type="text/css">
+
+body {
+  background-color: lightblue;
+}
+
+.form{
+  background-color: cyan;
+  border-style: dashed;
+  border-radius: 40px;
+  max-width: 250;
+  position: absolute;
+  height: 250;
+  top: 34%;
+  left: 50%;
+  padding-bottom:25px
+}
+h1 {color: red}
+
+</style>
+
+<div class="form">
+  <center>
+    <h1>Battle Royale!</h1>
+    <h2>Sign in to play</h2>
+    <form action="/names" method="post">
+      <label for="player_1_name">
+        Player 1 name
+        <input type="text" name="player_1_name">
+      </label>
+      <br>
+      <br>
+      <label for="player_2_name">
+        Player 2 name
+        <input type="text" name="player_2_name">
+      </label>
+      <br>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </center>
+</div>

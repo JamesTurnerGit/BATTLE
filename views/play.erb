@@ -1,3 +1,49 @@
+<style type="text/css">
+
+body {
+  background-color: lightblue;
+}
+
+.form{
+  background-color: cyan;
+  border-style: dashed;
+  border-radius: 40px;
+  max-width: 250;
+  position: absolute;
+  height: 250;
+  top: 34%;
+  left: 50%;
+  padding-bottom:25px
+}
+h1 {color: red}
+
+.player{
+  border: blue dashed 2px;
+  padding:20px;
+  position: relative;
+  top: -20%
+}
+
+.healthBar{
+  background: white;
+  border-radius: 9px;
+  border: black solid 2px;
+  padding: 25px;
+
+}
+
+.healthBarContents{
+  background: red;
+  padding: 25px;
+  border-radius: 9px;
+  margin: 0px
+}
+
+#player_1{float:left}
+#player_2{float:right}
+
+</style>
+
 <center><h1>Game on!</h1>
   <h2><%= @players[:player_1].name %> vs. <%= @players[:player_2].name %></h2>
   <!-- <br>
@@ -7,13 +53,29 @@
   <form action="/attack" method="post">
     <input type="submit" value="Attack">
   </form>
-
   <br>
-  <%= @players[:player_1].name %>: <strong><%= @players[:player_1].hitpoints %>HP</strong>
-  :
-  <%= @players[:player_2].name %>: <strong><%= @players[:player_2].hitpoints %>HP</strong>
-<br>
-<br>
+  <br>
   <%= @game.current_player.name %>'s turn
 
 </center>
+<div class= "player" id="player_1">
+  <img width="300" height="300" src="http://vignette4.wikia.nocookie.net/streetfighter/images/a/a0/Sf4charselectsagat.png/revision/latest?cb=20150322175455"/>
+  <br>
+  <div class = healthBar>
+    <div class = healthBarContents id="player_1_healthbar"></div>
+  </div>
+  <center>
+    <%= @players[:player_1].name %>: <strong><%= @players[:player_1].hitpoints %>HP</strong>
+  </center>
+</div>
+
+<div class= "player" id="player_2">
+  <img width="300" height="300" src="http://gianthamster.com/wp-content/uploads/2010/02/2009_09_01_sCaplinPool.jpg"/>
+  <br>
+  <div class = healthBar>
+    <div class = healthBarContents id="player_2_healthbar"></div>
+  </div>
+  <center>
+    <%= @players[:player_2].name %>: <strong><%= @players[:player_2].hitpoints %>HP</strong>
+  </center>
+</div>
