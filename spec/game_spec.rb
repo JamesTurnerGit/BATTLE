@@ -7,6 +7,7 @@ describe Game do
   subject(:game) { described_class.new(player_1, player_2)}
 
   it 'can attack an opponent' do
+    allow(Kernel).to receive(:rand).and_return(10)
     game.attack(player_2)
     expect(player_2).to have_received(:take_damage).with 10
   end

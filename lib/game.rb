@@ -1,6 +1,5 @@
 class Game
 
-  DEFAULT_DAMAGE = 10
 
   attr_reader :players, :current_player
 
@@ -17,7 +16,7 @@ class Game
     @@current_game
   end
 
-  def attack(opponent, damage = DEFAULT_DAMAGE)
+  def attack(opponent, damage = Kernel.rand(5..20))
     opponent.take_damage(damage)
     switch_player
   end
