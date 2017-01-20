@@ -10,4 +10,12 @@ describe Game do
     expect(game.attack(player_2)).to eq(player_2.take_damage)
   end
 
+  it 'shows the attackering player as player 1' do
+    expect(game.current_player).to eq player_1
+  end
+
+  it 'show attacking player as player 2' do
+    expect(game.switch).to eq player_2
+  end
+  
 end

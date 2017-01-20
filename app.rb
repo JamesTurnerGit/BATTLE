@@ -20,6 +20,7 @@ class Battle < Sinatra::Base
 
   get '/play' do
     @players = $game.players
+    @game = $game
     erb :play
   end
 
