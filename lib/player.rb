@@ -13,4 +13,7 @@ class Player
     @hitpoints -= damage
   end
 
+  def dead?
+    hitpoints <= 0
+  end
 end

@@ -24,4 +24,14 @@ describe Game do
     expect(game.opposing_player).to eq player_2
   end
 
+  it 'knows when the game is finished' do
+    allow(player_1).to receive(:dead?).and_return(true)
+    expect(game).to be_over
+  end
+
+  it 'knows who has won' do
+    allow(player_1).to receive(:dead?).and_return(true)
+    allow(player_2).to receive(:dead?).and_return(false)
+    expect(game.winner).to eq player_2
+  end
 end

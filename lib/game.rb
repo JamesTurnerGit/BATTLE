@@ -29,4 +29,12 @@ class Game
     other_player current_player
   end
 
+  def over?
+    !!(@players[:player_1].dead? || @players[:player_2].dead?)
+  end
+
+  def winner
+    return @players[:player_2] unless @players[:player_2].dead?
+    @players[:player_1]
+  end
 end

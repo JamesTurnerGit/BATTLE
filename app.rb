@@ -24,12 +24,21 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  get '/winner' do
+    @game = $game
+    erb :winner
+  end
+
   post '/attack' do
-   game = $game
-   @players = game.players
-   game.attack(game.opposing_player)
-   redirect '/attack'
- end
+    game = $game
+    @players = game.players
+    game.attack(game.opposing_player)
+    if game.over?
+      redirect '/winner'
+    else
+      redirect '/attack'
+    end
+  end
 
   get '/attack' do
     @game = $game

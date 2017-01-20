@@ -15,4 +15,9 @@ describe Player do
   it 'can take damage' do
     expect{player_2.take_damage(10)}.to change{player_2.hitpoints}.by(-10)
   end
+
+  it 'knows when it\'s dead' do
+    player.take_damage 100
+    expect(player).to be_dead
+  end
 end
