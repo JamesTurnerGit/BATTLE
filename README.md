@@ -14,7 +14,6 @@ the most intense next-gen flamingo showdown/throwdown you will ever come accross
 Featuring healthbars, Random damage, and flamingos!
 
 ## usage
----
 download this repo and run app.rb
 open a browser window and go to localhost:3000
 then just enter your names and click the battle button to begin!
