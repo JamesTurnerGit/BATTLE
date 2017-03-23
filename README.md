@@ -1,5 +1,6 @@
 # Battle
 Makers Academy Week 3 Challenge
+
 In week three we had our first introduction to Sinatra, a small web application framework. It was also my own personal first experience to CSS
 
 My favourite part of this project was messing around in css, getting the health bars going was tricky.
