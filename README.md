@@ -3,7 +3,7 @@ Makers Academy Week 3 Challenge
 
 In week three we had our first introduction to Sinatra, a small web application framework. It was also my own personal first experience to CSS
 
-My favourite part of this project was messing around in css, getting the health bars going was tricky.
+My favourite part of this project was messing around in css, it took a lot of tweaking to get the health bars working!
 
 We were introduced to this before rails so that we could grasp the background logic for this type of framework, All of it is within your app instead of secreted away in railsland.
 
